@@ -202,7 +202,7 @@ const onMouseenter = (index) => {
       display: flex;
       align-items: center;
       position: absolute;
-      z-index: 3;
+      z-index: 4;
       top: 20px;
       right: 20px;
       @include body-xs-regular;
