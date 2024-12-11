@@ -166,7 +166,7 @@ const onMouseenter = (index) => {
          height: 100%;
          left: 0;
          background: #392B3052;
-         // opacity: 0;
+         opacity: 0;
          pointer-events: none;
          transition: $transition;
       }
