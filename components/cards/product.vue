@@ -35,6 +35,7 @@
    </NuxtLink>
 </template>
 <script setup>
+import { isMobile } from '#build/imports';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination } from 'swiper/modules'
 import IconHeart from '@/assets/icons/heart.svg'
@@ -48,7 +49,9 @@ const onSwiper = (s) => {
    swiper.value = s
 }
 const onMouseenter = (index) => {
-   swiper.value.slideTo(index)
+   if (isMobile) {
+      swiper.value.slideTo(index)
+   }
 
 }
 
@@ -123,27 +126,30 @@ const onMouseenter = (index) => {
    &__image {
       position: relative;
       aspect-ratio: 1;
+      max-width: 100%;
 
-      &:hover {
-         &::after {
-            opacity: 1;
-         }
-
-         .app-pagination {
-            opacity: 1;
-         }
-
-         .product-card {
-            &__sost {
+      @media(hover:hover) {
+         &:hover {
+            &::after {
                opacity: 1;
             }
 
-            &__likes {
-               color: $text-light-prim;
+            .app-pagination {
+               opacity: 1;
+            }
 
-               svg {
-                  path {
-                     fill: $text-light-prim;
+            .product-card {
+               &__sost {
+                  opacity: 1;
+               }
+
+               &__likes {
+                  color: $text-light-prim;
+
+                  svg {
+                     path {
+                        fill: $text-light-prim;
+                     }
                   }
                }
             }

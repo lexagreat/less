@@ -8,7 +8,7 @@
             <div class="product-section__main">
                <Swiper :space-between="12" slides-per-view="auto" :breakpoints="{
                   1025: {
-                     slidesPerView: 3,
+                     slidesPerView: 4,
                      spaceBetween: 20,
                   }
                }">
