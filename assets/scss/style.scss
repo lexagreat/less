@@ -1,0 +1,59 @@
+@import "nullstyle";
+@import "fonts";
+
+.wrapper {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   font-family: $mainFont;
+   font-weight: 500;
+}
+.main {
+   flex: 1;
+   padding-top: var(--headerHeight);
+   padding-bottom: var(--sectionMarginBig);
+}
+
+.collapse:not(.collapse_show) {
+   display: none;
+}
+
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+   padding: 0 var(--containerPadding);
+}
+.circle {
+   --size: 32px;
+   flex: 0 0 var(--size);
+   width: var(--size);
+   height: var(--size);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.h1 {
+   @include h1;
+}
+.h2 {
+   @include h2;
+   @media (max-width: $tablet) {
+      @include h3;
+   }
+   @media (max-width: $mobile) {
+      @include body-s-medium;
+   }
+}
+.h3 {
+   @include h3;
+   @media (max-width: $tablet) {
+      @include h4;
+   }
+   @media (max-width: $mobile) {
+      @include body-s-medium;
+   }
+}
+.h4 {
+   @include h4;
+}

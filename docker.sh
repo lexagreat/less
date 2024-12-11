@@ -1,0 +1,1 @@
+sshpass -p 'o5Cv@jsZq3bG_K' ssh root@83.147.247.116 "cd /var/www/dev/data/www/less.okttastudio.ru/frontend; git reset --hard; git pull origin main; docker stop nuxt-app-less;docker rm nuxt-app-less;docker system prune -a -f; docker-compose pull; docker-compose  up -d"

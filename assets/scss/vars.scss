@@ -1,0 +1,119 @@
+$tablet: 1024px;
+$mobile: 568px;
+$text-dark-prim: #392b30;
+$text-dark-sec: #392b30b8;
+$text-dark-tert: #392b3066;
+$text-light-prim: #fdf9ed;
+$text-light-sec: #eee7cf;
+$text-light-tert: #e0d5b3;
+
+$bg-prim: #ffffff;
+$bg-light-prim: #fdf9ed;
+$bg-light-sec: #fdf9edb8;
+$bg-dark-prim: #392b30;
+$bg-dark-sec: #392b30b8;
+$bg-overlay: #392b30;
+
+$border-light-prim: #fdf9ed3d;
+$border-light-sec: #fdf9ed8f;
+$border-dark-prim: #392b303d;
+$border-dark-sec: #392b308f;
+
+$transition: 0.4s;
+body {
+   --containerPadding: 40px;
+   --headerHeight: 88px;
+   --sectionMarginSmall: 40px;
+   --sectionMarginMedium: 56px;
+   --sectionMarginBig: 100px;
+   @media (max-width: $tablet) {
+      --headerHeight: 80px;
+      --sectionMarginSmall: 32px;
+      --sectionMarginMedium: 48px;
+      --sectionMarginBig: 80px;
+
+      --containerPadding: 16px;
+   }
+   @media (max-width: $mobile) {
+      --headerHeight: 61px;
+      --sectionMarginSmall: 20px;
+      --sectionMarginMedium: 32px;
+   }
+}
+$mainFont: "TT Chocolates Trial";
+
+@mixin h1 {
+   //styleName: Display/H1;
+   font-family: $mainFont;
+   font-size: 64px;
+   font-weight: 500;
+   line-height: 76px;
+}
+@mixin h2 {
+   //styleName: Display/H2;
+   font-family: $mainFont;
+   font-size: 52px;
+   font-weight: 500;
+   line-height: 64px;
+}
+@mixin h3 {
+   //styleName: Display/H3;
+   font-family: $mainFont;
+   font-size: 40px;
+   font-weight: 500;
+   line-height: 48px;
+}
+@mixin h4 {
+   //styleName: Display/H4;
+   font-family: $mainFont;
+   font-size: 32px;
+   font-weight: 500;
+   line-height: 38px;
+}
+
+@mixin body-s-bold {
+   //styleName: Body/S/Bold;
+   font-family: $mainFont;
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 24px;
+}
+@mixin body-s-medium {
+   //styleName: Body/S/Medium;
+   @include body-s-bold;
+   font-weight: 500;
+}
+@mixin body-s-regular {
+   //styleName: Body/S/Regular;
+   @include body-s-bold;
+   font-weight: 400;
+}
+@mixin body-xs-bold {
+   //styleName: Body/S/Bold;
+   //styleName: Body/XS/Bold;
+   font-family: $mainFont;
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 20px;
+}
+@mixin body-xs-medium {
+   //styleName: Body/S/Medium;
+   @include body-xs-bold;
+   font-weight: 500;
+}
+@mixin body-xs-regular {
+   //styleName: Body/S/Regular;
+   @include body-xs-bold;
+   font-weight: 400;
+}
+@mixin body-xs-regular-italic {
+   //styleName: Body/S/Regular;
+   @include body-xs-regular;
+   font-style: italic;
+}
+@mixin body-xxs-regular {
+   //styleName: Body/XXS/Regular;
+   font-family: $mainFont;
+   font-size: 10px;
+   line-height: 14px;
+}
