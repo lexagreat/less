@@ -5,5 +5,5 @@ services:
       build:
          context: .
       ports:
-         - "3002:3002"
+         - "3000:3002"
       container_name: nuxt-app-less
