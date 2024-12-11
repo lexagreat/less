@@ -51,7 +51,11 @@ const path = ref([
 ])
 const products = ref([
    {
-      image: "/img/product1.png",
+      images: [
+         "/img/product1.png",
+         "/img/product2.png",
+         "/img/product3.png",
+      ],
       category: "туфли",
       title: "Prada Shoes",
       size: "38,5",
@@ -61,7 +65,11 @@ const products = ref([
       likes: 5,
    },
    {
-      image: "/img/product2.png",
+      images: [
+         "/img/product2.png",
+         "/img/product1.png",
+         "/img/product3.png",
+      ],
       textcategory: "куртка",
       title: "ACNE STUDIOS",
       size: "m 44/46",
@@ -71,7 +79,11 @@ const products = ref([
       likes: 5,
    },
    {
-      image: "/img/product3.png",
+      images: [
+         "/img/product3.png",
+         "/img/product1.png",
+         "/img/product2.png",
+      ],
       category: "сумка",
       title: "Fendi Peekaboo",
       size: "",
@@ -81,7 +93,11 @@ const products = ref([
       likes: 5,
    },
    {
-      image: "/img/product4.png",
+      images: [
+         "/img/product4.png",
+         "/img/product1.png",
+         "/img/product2.png",
+      ],
       category: "ремень",
       title: "Hermes Belt",
       size: "m 42",

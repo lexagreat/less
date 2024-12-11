@@ -4,8 +4,8 @@
          <div class="home-welcome__wrapper">
             <h2 class="home-welcome__title h2">
                добро пожаловать
-               <span>на платформу LESs</span> <br>
-               <span>маркетплейс</span>
+               <span>на платформу LESs <img src="/public/img/home/title-hover2.png" alt=""></span> <br>
+               <span><img src="/public/img/home/title-hover1.png" alt=""> маркетплейс</span>
                одежды и аксессуаров
             </h2>
             <UiButton dark arrow>к покупкам</UiButton>
@@ -52,6 +52,25 @@
       }
 
       span {
+         position: relative;
+
+         img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: $transition;
+         }
+
+         &:hover {
+            img {
+               opacity: 1;
+            }
+         }
+
          padding: 16px 24px;
          background-color: $bg-light-prim;
          white-space: nowrap;
