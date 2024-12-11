@@ -193,7 +193,9 @@ const onMouseenter = (index) => {
          flex: 1;
       }
 
-
+      @media(max-width: $tablet) {
+         display: none;
+      }
    }
 
    &__likes {

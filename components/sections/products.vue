@@ -6,7 +6,10 @@
                <slot />
             </h3>
             <div class="product-section__main">
-               <Swiper :space-between="12" slides-per-view="auto" :breakpoints="{
+               <Swiper :modules="[Mousewheel]" :mousewheel="{
+                  enabled: true,
+                  forceToAxis: true
+               }" :space-between="12" slides-per-view="auto" :breakpoints="{
                   1025: {
                      slidesPerView: 4,
                      spaceBetween: 20,
@@ -22,6 +25,8 @@
    </section>
 </template>
 <script setup>
+import { Mousewheel } from 'swiper/modules';
+
 import { Swiper, SwiperSlide } from 'swiper/vue';
 const props = defineProps({
    items: Array

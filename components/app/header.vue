@@ -117,11 +117,12 @@ const makeHeroDark = () => {
 }
 const route = useRoute()
 watch(() => route.params, () => {
+   window.removeEventListener('scroll', onScroll)
    makeHeroDark()
 })
-onBeforeRouteLeave(() => {
-   window.removeEventListener('scroll', onScroll)
-})
+// onBeforeRouteLeave(() => {
+//    window.removeEventListener('scroll', onScroll)
+// })
 onMounted(() => {
    makeHeroDark()
 })
