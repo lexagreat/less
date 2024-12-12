@@ -4,8 +4,8 @@
          <div class="home-welcome__wrapper">
             <h2 class="home-welcome__title h2">
                добро пожаловать
-               <span>на платформу LESs <img src="/public/img/home/title-hover2.png" alt=""></span> <br>
-               <span><img src="/public/img/home/title-hover1.png" alt=""> маркетплейс</span>
+               <span>в LESs <img src="/img/home/title-hover2.png" alt=""></span> <br>
+               <span><img src="/img/home/title-hover1.png" alt=""> маркетплейс</span>
                одежды и аксессуаров
             </h2>
             <UiButton dark arrow>к покупкам</UiButton>
